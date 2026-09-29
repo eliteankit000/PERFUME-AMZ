@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Header onFilter={filter} onSearch={focusSearch} />
       <main id="top">
-        <Hero product={featured[0] || products[0]} onExplore={goCollection} onBest={() => filter('best')} />
+        <Hero products={products} onExplore={goCollection} onBest={() => filter('best')} />
         <section className="alt" id="picks"><div className="w">
           <div className="hd"><span className="eb">Editor's Picks</span><h2>Fragrances Worth Discovering</h2>
             <p>A curated collection of scents selected for different moods, moments, and personalities.</p></div>
