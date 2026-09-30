@@ -3,6 +3,7 @@ import useProducts from '../hooks/useProducts';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductGrid from '../components/ProductGrid';
+import ProductMarquee from '../components/ProductMarquee';
 import CategoryFilter from '../components/CategoryFilter';
 import MoodTiles from '../components/MoodTiles';
 import CTA from '../components/CTA';
@@ -34,7 +35,7 @@ export default function Home() {
         <section className="alt" id="picks"><div className="w">
           <div className="hd"><span className="eb">Editor's Picks</span><h2>Timepieces Worth Discovering</h2>
             <p>A curated collection of luxury watches selected for different styles, occasions, and personalities.</p></div>
-          <ProductGrid products={featured} loading={loading} error={error} />
+          <ProductMarquee products={featured} loading={loading} error={error} />
         </div></section>
         <section id="collection"><div className="w">
           <div className="hd"><span className="eb">Discover Your Timepiece</span><h2>Choose Your Style</h2></div>
