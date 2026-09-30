@@ -3,17 +3,20 @@ import { NAV } from '../lib/constants';
 
 export default function Header({ onFilter, onSearch }) {
   const [open, setOpen] = useState(false);
-  const go = (c) => { setOpen(false); onFilter(c); };
+  const pick = (k) => { setOpen(false); onFilter(k); };
+
   return (
     <header>
       <div className="w nav">
-        <a className="logo" href="#top">SCENTÉ</a>
-        <nav className={'ln' + (open ? ' open' : '')} aria-label="Primary">
-          {NAV.map(([k, l]) => <button key={k} onClick={() => go(k)}>{l}</button>)}
+        <a href="#top" className="logo" aria-label="HOROVA home">HOROVA</a>
+        <nav className={`ln${open ? ' open' : ''}`} aria-label="Main">
+          {NAV.map(([k, label]) => (
+            <button key={k} type="button" onClick={() => pick(k)}>{label}</button>
+          ))}
         </nav>
-        <div>
-          <button className="ic" aria-label="Search" onClick={() => { setOpen(false); onSearch(); }}>⌕</button>
-          <button className="ic bg" aria-label="Menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>☰</button>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <button type="button" className="ic" aria-label="Search watches" onClick={() => { setOpen(false); onSearch(); }}>⌕</button>
+          <button type="button" className="ic bg" aria-label="Menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>{open ? '✕' : '☰'}</button>
         </div>
       </div>
     </header>
