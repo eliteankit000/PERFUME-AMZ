@@ -42,18 +42,18 @@ export default function AdminDashboard({ email, onSignOut }) {
     const p = confirm; setConfirm(null);
     await deleteProduct(p.id);
     if (p.image_url) removeImageIfOrphan(p.image_url).catch(() => {});
-    ok('Perfume deleted.');
+    ok('Watch deleted.');
   });
 
   return (
     <div className="a-wrap">
       <div className="a-top">
         <div><div className="logo" style={{ fontSize: 18, marginBottom: 14 }}>SCENTÉ</div>
-          <h1>Fragrance collection</h1><p>Manage your perfume affiliate products.</p></div>
+          <h1>Watch collection</h1><p>Manage your watch affiliate products.</p></div>
         <div className="a-bar">
           <a className="a-btn" style={{ display: 'inline-flex', alignItems: 'center' }} href="/">View site</a>
           <button className="a-btn" onClick={onSignOut} title={email}>Sign out</button>
-          <button className="b" onClick={() => setEditing('new')}>+ Add Perfume</button>
+          <button className="b" onClick={() => setEditing('new')}>+ Add Watch</button>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ export default function AdminDashboard({ email, onSignOut }) {
       {editing && <ProductForm product={editing === 'new' ? null : editing} onSave={save} onCancel={() => setEditing(null)} />}
       {confirm && (
         <div className="a-modal c" role="dialog" aria-modal="true"><div className="a-dlg">
-          <h2>Delete this perfume from the collection?</h2>
+          <h2>Delete this watch from the collection?</h2>
           <div className="btns"><button className="b o" onClick={() => setConfirm(null)}>Cancel</button><button className="b" onClick={remove}>Delete</button></div>
         </div></div>
       )}
