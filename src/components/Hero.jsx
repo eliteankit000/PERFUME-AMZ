@@ -27,11 +27,11 @@ export default function Hero({ products = [], onExplore, onBest }) {
   return (
     <div className="w hero">
       <div>
-        <span className="eb">The Art of Fragrance</span>
-        <h1>Find a scent<br />that becomes<br /><em>your signature.</em></h1>
-        <p>Discover fragrances worth wearing, gifting, and remembering.</p>
+        <span className="eb">The Art of Watchmaking</span>
+        <h1>Find a watch<br />that becomes<br /><em>your signature.</em></h1>
+        <p>Discover timepieces worth wearing, gifting, and passing down.</p>
         <div className="btns">
-          <button className="b" onClick={onExplore}>Explore Fragrances</button>
+          <button className="b" onClick={onExplore}>Explore Watches</button>
           <button className="b o" onClick={onBest}>Best Sellers</button>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function Hero({ products = [], onExplore, onBest }) {
         className="vis"
         role="region"
         aria-roledescription="carousel"
-        aria-label="Featured fragrances"
+        aria-label="Featured watches"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         onFocus={() => setPaused(true)}
@@ -51,7 +51,7 @@ export default function Hero({ products = [], onExplore, onBest }) {
                 key={p.id}
                 className={`sl${k === idx ? ' on' : ''}`}
                 src={p.image_url}
-                alt={k === idx ? (p.name || 'Curated fragrance product') : ''}
+                alt={k === idx ? (p.name || 'Curated luxury watch') : ''}
                 aria-hidden={k === idx ? undefined : true}
                 loading={k < 2 ? 'eager' : 'lazy'}
                 decoding="async"
