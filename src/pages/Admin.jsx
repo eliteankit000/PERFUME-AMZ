@@ -20,7 +20,7 @@ export default function Admin() {
       <div className="a-login"><div className="box">
         <div className="logo">SCENTÉ</div>
         <h1>Collection admin</h1>
-        <p>Sign in with the authorized Google account to manage your fragrance collection.</p>
+        <p>Sign in with the authorized Google account to manage your watch collection.</p>
         <button className="b" onClick={() => signInWithGoogle().catch((e) => console.error(e))}>Continue with Google</button>
       </div></div>
     );
