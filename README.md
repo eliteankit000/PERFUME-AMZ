@@ -1,6 +1,6 @@
-# SCENTÉ
+# HOROVA
 
-Premium perfume affiliate storefront. React + Vite, Supabase (Postgres, Auth, Storage), deployed on Vercel. No cart, checkout, prices, or Amazon API — each product is an image plus your own affiliate link.
+Premium luxury watch affiliate storefront. React + Vite, Supabase (Postgres, Auth, Storage), deployed on Vercel. No cart, checkout, prices, or Amazon API — each product is an image plus your own affiliate link.
 
 ```
 npm install && npm run dev      # http://localhost:5173
