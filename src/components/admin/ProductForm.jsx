@@ -48,9 +48,9 @@ export default function ProductForm({ product, onSave, onCancel }) {
   }
 
   return (
-    <div className="a-modal" role="dialog" aria-modal="true" aria-label={product ? 'Edit perfume' : 'Add perfume'}>
+    <div className="a-modal" role="dialog" aria-modal="true" aria-label={product ? 'Edit watch' : 'Add watch'}>
       <form className="a-sheet" onSubmit={submit} noValidate>
-        <h2>{product ? 'Edit perfume' : 'Add perfume'}</h2>
+        <h2>{product ? 'Edit watch' : 'Add watch'}</h2>
 
         <label htmlFor="f-name">Product name (optional)</label>
         <input id="f-name" type="text" maxLength={80} value={name} onChange={(e) => setName(e.target.value)} placeholder="Dior Sauvage" />
