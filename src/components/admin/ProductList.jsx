@@ -12,7 +12,7 @@ export default function ProductList({ products, busy, onMove, onToggle, onEdit, 
     <div className="a-row" key={p.id}>
       <Thumb url={p.image_url} />
       <div>
-        <div className="nm">{p.name || 'Untitled fragrance'}</div>
+        <div className="nm">{p.name || 'Untitled watch'}</div>
         <small>{catName(p.category)} · {p.active ? 'Active' : 'Hidden'}{p.featured ? ' · Featured' : ''} · {p.click_count || 0} clicks</small>
       </div>
       <div className="a-act">
