@@ -41,7 +41,7 @@ export default function ProductForm({ product, onSave, onCancel }) {
       const image_url = mode === 'url' ? imageUrl.trim() || null : file ? null : product?.image_url || null;
       await onSave({ name: name.trim() || null, affiliate_url: url, category, featured, active, image_url }, mode === 'upload' ? file : null);
     } catch (ex) {
-      console.error('[scente] save failed:', ex);
+      console.error('[horova] save failed:', ex);
       setErr('Unable to save this product. Please try again.');
       setBusy(false);
     }
