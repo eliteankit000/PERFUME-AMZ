@@ -11,7 +11,7 @@ export default function AdminStats({ products }) {
       <div className="a-panel">
         <h2>Top clicked</h2>
         {top.length
-          ? top.map((p) => <div className="a-top3" key={p.id}><span>{p.name || 'Untitled fragrance'}</span><span>{p.click_count} clicks</span></div>)
+          ? top.map((p) => <div className="a-top3" key={p.id}><span>{p.name || 'Untitled watch'}</span><span>{p.click_count} clicks</span></div>)
           : <p style={{ color: 'var(--mute)', margin: 0 }}>No affiliate clicks yet.</p>}
       </div>
     </>
