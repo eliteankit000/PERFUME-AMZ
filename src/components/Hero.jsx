@@ -59,7 +59,7 @@ export default function Hero({ products = [], onExplore, onBest }) {
               />
             ))
           : <div className="bt" aria-hidden="true" />}
-        <small>SCENTÉ / THE EDIT</small>
+        <small>HOROVA / THE EDIT</small>
         {n > 1 && (
           <div className="dots">
             {slides.map((p, k) => (
