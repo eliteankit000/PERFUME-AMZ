@@ -43,8 +43,8 @@ export default function ProductCard({ p }) {
       <div className="im" ref={imRef} onPointerMove={onMove} onPointerLeave={onLeave}>
         {p.featured === true && <span className="fb">Curated</span>}
         {p.image_url && !bad
-          ? <img src={p.image_url} alt={p.name || 'Curated fragrance product'} loading="lazy" decoding="async" onError={() => setBad(true)} />
-          : <div className="ph">FRAGRANCE IMAGE</div>}
+          ? <img src={p.image_url} alt={p.name || 'Curated luxury watch'} loading="lazy" decoding="async" onError={() => setBad(true)} />
+          : <div className="ph">WATCH IMAGE</div>}
       </div>
       <div className="ct">
         <div className="tx">
