@@ -24,7 +24,7 @@ export default function Home() {
   const goCollection = () => document.getElementById('collection')?.scrollIntoView({ behavior: 'smooth' });
   const filter = (c) => { setCat(c); goCollection(); };
   const focusSearch = () => { goCollection(); setTimeout(() => searchRef.current?.focus(), 500); };
-  const empty = products.length ? 'No fragrances match.' : 'The collection is being curated.';
+  const empty = products.length ? 'No watches match.' : 'The collection is being curated.';
 
   return (
     <>
@@ -32,19 +32,19 @@ export default function Home() {
       <main id="top">
         <Hero products={products} onExplore={goCollection} onBest={() => filter('best')} />
         <section className="alt" id="picks"><div className="w">
-          <div className="hd"><span className="eb">Editor's Picks</span><h2>Fragrances Worth Discovering</h2>
-            <p>A curated collection of scents selected for different moods, moments, and personalities.</p></div>
+          <div className="hd"><span className="eb">Editor's Picks</span><h2>Timepieces Worth Discovering</h2>
+            <p>A curated collection of luxury watches selected for different styles, occasions, and personalities.</p></div>
           <ProductGrid products={featured} loading={loading} error={error} />
         </div></section>
         <section id="collection"><div className="w">
-          <div className="hd"><span className="eb">Discover Your Scent</span><h2>Choose Your Mood</h2></div>
+          <div className="hd"><span className="eb">Discover Your Timepiece</span><h2>Choose Your Style</h2></div>
           <CategoryFilter cat={cat} onChange={setCat} />
-          <input ref={searchRef} className="sr" type="search" placeholder="Search fragrances" aria-label="Search fragrances" value={q} onChange={(e) => setQ(e.target.value)} />
+          <input ref={searchRef} className="sr" type="search" placeholder="Search watches" aria-label="Search watches" value={q} onChange={(e) => setQ(e.target.value)} />
           <ProductGrid products={list} loading={loading} error={error} empty={empty} />
           <MoodTiles onPick={filter} />
         </div></section>
         <section className="alt"><div className="w">
-          <div className="hd"><span className="eb">Most Wanted</span><h2>The Fragrances Everyone Is Talking About</h2></div>
+          <div className="hd"><span className="eb">Most Wanted</span><h2>The Watches Everyone Is Talking About</h2></div>
           <ProductGrid products={best} loading={loading} error={error} empty="Coming soon." />
         </div></section>
         <CTA onClick={() => filter('all')} />
