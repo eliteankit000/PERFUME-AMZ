@@ -48,7 +48,7 @@ export default function AdminDashboard({ email, onSignOut }) {
   return (
     <div className="a-wrap">
       <div className="a-top">
-        <div><div className="logo" style={{ fontSize: 18, marginBottom: 14 }}>CHRONÉ</div>
+        <div><div className="logo" style={{ fontSize: 18, marginBottom: 14 }}>HOROVA</div>
           <h1>Watch collection</h1><p>Manage your watch affiliate products.</p></div>
         <div className="a-bar">
           <a className="a-btn" style={{ display: 'inline-flex', alignItems: 'center' }} href="/">View site</a>
