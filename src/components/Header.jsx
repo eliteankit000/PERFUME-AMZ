@@ -7,7 +7,7 @@ export default function Header({ onFilter, onSearch }) {
   return (
     <header>
       <div className="w nav">
-        <a className="logo" href="#top">CHRONÉ</a>
+        <a className="logo" href="#top">HOROVA</a>
         <nav className={'ln' + (open ? ' open' : '')} aria-label="Primary">
           {NAV.map(([k, l]) => <button key={k} onClick={() => go(k)}>{l}</button>)}
         </nav>
