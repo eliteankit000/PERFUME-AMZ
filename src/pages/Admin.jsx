@@ -18,7 +18,7 @@ export default function Admin() {
   if (!user) {
     return (
       <div className="a-login"><div className="box">
-        <div className="logo">HOROVA</div>
+        <div className="logo">CHRONÉ</div>
         <h1>Collection admin</h1>
         <p>Sign in with the authorized Google account to manage your watch collection.</p>
         <button className="b" onClick={() => signInWithGoogle().catch((e) => console.error(e))}>Continue with Google</button>
@@ -29,7 +29,7 @@ export default function Admin() {
   if (!isAdmin) {
     return (
       <div className="a-login"><div className="box">
-        <div className="logo">HOROVA</div>
+        <div className="logo">CHRONÉ</div>
         <h1>Access denied.</h1>
         <p>This account is not authorized to manage the collection.</p>
         <button className="b o" onClick={signOut}>Sign out</button>
