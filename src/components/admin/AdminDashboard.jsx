@@ -14,7 +14,7 @@ export default function AdminDashboard({ email, onSignOut }) {
 
   useEffect(() => { if (toast) { const t = setTimeout(() => setToast(null), 3500); return () => clearTimeout(t); } }, [toast]);
   const ok = (m) => setToast({ m });
-  const fail = (e) => { console.error('[horova] admin action failed:', e); setToast({ m: 'Unable to save this product. Please try again.', bad: true }); };
+  const fail = (e) => { console.error('[scente] admin action failed:', e); setToast({ m: 'Unable to save this product. Please try again.', bad: true }); };
 
   async function save(values, file) {
     let uploaded = null;
@@ -48,7 +48,7 @@ export default function AdminDashboard({ email, onSignOut }) {
   return (
     <div className="a-wrap">
       <div className="a-top">
-        <div><div className="logo" style={{ fontSize: 18, marginBottom: 14 }}>HOROVA</div>
+        <div><div className="logo" style={{ fontSize: 18, marginBottom: 14 }}>CHRONÉ</div>
           <h1>Watch collection</h1><p>Manage your watch affiliate products.</p></div>
         <div className="a-bar">
           <a className="a-btn" style={{ display: 'inline-flex', alignItems: 'center' }} href="/">View site</a>
